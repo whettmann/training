@@ -20,7 +20,8 @@ jobs:
         with:
           node-version: "12"
 
-      - run: npx vuepress build
+      - run: yarn install
+      - run: yarn docs
       - name: Upload result of vuepress build
         uses: actions/upload-artifact@v2
         with:
